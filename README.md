@@ -9,6 +9,11 @@ MySQL binlog parser
 4. WriteRowsEventData(insert)、DeleteRowsEventData(delete)、UpdateRowsEventData(update): real data
 5. XidEventData: xid
 
+### Todo
+
+* Spring Boot
+* @Async support
+* Spring plugin integration for SPI
 
 ### MySQL的binlog配置
 my.cnf添加以下内容：
