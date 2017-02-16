@@ -25,6 +25,24 @@ max_binlog_size  = 100M
 binlog-format    = row #Very important if you want to receive write, update and delete row events
 ```
 
+### MySQL Binlog commands
+
+```
+mysql> show master status
+mysql> show binary logs;
+mysql> show binlog events in 'mysql-bin.000002';
+```
+
+### Testing
+After start the application, enter mysql shell and execute following code:
+
+```sql
+create table users (
+  id int not null PRIMARY KEY  AUTO_INCREMENT,
+  name varchar(32)
+);
+insert into users(name) value('jacky');
+```
 ### framework
 
 * https://github.com/noplay/python-mysql-replication
