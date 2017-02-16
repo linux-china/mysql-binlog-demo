@@ -9,10 +9,10 @@ import com.github.shyiko.mysql.binlog.event.*;
  * @author linux_china
  */
 public class BinlogSlave {
-    public static BinlogRecorder binlogRecorder = new BinlogRecorder("mysql-bin.000001", 107L);
+    public static BinlogRecorder binlogRecorder = new BinlogRecorder("mysql-bin.000003", 154L);
 
     public static void main(String[] args) throws Exception {
-        BinaryLogClient client = new BinaryLogClient("dev.mvnsearch.net", 3306, "root", "123456");
+        BinaryLogClient client = new BinaryLogClient("127.0.0.1", 3306, "root", "123456");
         client.setBinlogFilename(binlogRecorder.getFilename());
         client.setBinlogPosition(binlogRecorder.getPosition());
         client.registerEventListener(new BinaryLogClient.EventListener() {
