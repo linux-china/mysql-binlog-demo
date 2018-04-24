@@ -9,13 +9,7 @@ MySQL binlog parser
 4. WriteRowsEventData(insert)、DeleteRowsEventData(delete)、UpdateRowsEventData(update): real data
 5. XidEventData: xid
 
-### Todo
-
-* Spring Boot
-* @Async support
-* Spring plugin integration for SPI
-
-### MySQL的binlog配置
+### MySQLd binlog configuration
 my.cnf添加以下内容：
 
     [mysqld]
@@ -25,8 +19,18 @@ my.cnf添加以下内容：
     max_binlog_size  = 100M
     binlog-format    = row #Very important if you want to receive write, update and delete row events
 
+### Binlog operations
+
+* show binary logs;
+* show master status;
+* show binlog events in 'mysql-bin.000001';
+
+### Todo
+
+* Spring Boot
+* @Async support
+* Spring plugin integration for SPI
+
 ### framework
 
-* https://github.com/noplay/python-mysql-replication
-* https://github.com/jeremycole/mysql_binlog
 * https://github.com/shyiko/mysql-binlog-connector-java
