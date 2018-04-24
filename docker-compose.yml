@@ -1,0 +1,11 @@
+version: "3"
+services:
+  mysql:
+    image: mysql:5.6.40
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: binlog_demo
+    volumes:
+      - "./src/main/conf:/etc/mysql/conf.d"
