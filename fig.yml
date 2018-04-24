@@ -1,4 +1,0 @@
-mysql:
-    image: linuxchina/mysql
-    ports:
-      - "3306:3306"
